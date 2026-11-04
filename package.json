@@ -1,0 +1,18 @@
+{
+  "name": "restful-booker-api-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Postman and Newman tests for the public Restful-Booker API.",
+  "engines": {
+    "node": "26.x"
+  },
+  "scripts": {
+    "test": "npm run test:api && npm run test:data",
+    "test:api": "mkdir -p reports && newman run postman/restful-booker.postman_collection.json -e postman/restful-booker.postman_environment.json --folder Health --folder Auth --folder Booking --folder Negative --timeout-request 30000 --timeout-script 30000 --reporters cli,htmlextra,json --reporter-htmlextra-export reports/newman-report.html --reporter-json-export reports/newman-report.json --reporter-htmlextra-title \"Restful-Booker API tests\" --reporter-htmlextra-browserTitle \"Restful-Booker API tests\"",
+    "test:data": "mkdir -p reports && newman run postman/restful-booker.postman_collection.json -e postman/restful-booker.postman_environment.json --folder DataDriven -d data/bookings.csv --timeout-request 30000 --timeout-script 30000 --reporters cli,htmlextra,json --reporter-htmlextra-export reports/data-driven-report.html --reporter-json-export reports/data-driven-report.json --reporter-htmlextra-title \"Restful-Booker data-driven tests\" --reporter-htmlextra-browserTitle \"Restful-Booker data-driven tests\""
+  },
+  "devDependencies": {
+    "newman": "6.2.3",
+    "newman-reporter-htmlextra": "1.23.1"
+  }
+}
