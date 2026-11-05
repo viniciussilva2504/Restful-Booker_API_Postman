@@ -6,6 +6,8 @@ Vinicius Jesus da Silva
 
 [![API tests](https://github.com/viniciussilva2504/Restful-Booker_API_Postman/actions/workflows/api-tests.yml/badge.svg)](https://github.com/viniciussilva2504/Restful-Booker_API_Postman/actions/workflows/api-tests.yml)
 
+<video src="reports/runningtests.mp4" controls width="720"></video>
+
 The badge tracks the `API tests` workflow on the default branch. It has no status until that workflow file is on `main`.
 
 ## What is tested
