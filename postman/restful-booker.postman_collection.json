@@ -5,6 +5,7 @@
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "event": [
+
     {
       "listen": "prerequest",
       "script": {
@@ -43,6 +44,7 @@
           "    additionalneeds: { type: \"string\" }",
           "  }",
           "};",
+
           "",
           "pm.collectionVariables.set(\"schemaBooking\", JSON.stringify(bookingSchema));",
           "pm.collectionVariables.set(\"schemaCreated\", JSON.stringify({",
@@ -63,6 +65,7 @@
           "    properties: { bookingid: { type: \"number\" } }",
           "  }",
           "}));",
+
           "pm.collectionVariables.set(\"schemaToken\", JSON.stringify({",
           "  type: \"object\",",
           "  additionalProperties: false,",
@@ -80,6 +83,7 @@
           "  return;",
           "}",
           "",
+
           "pm.sendRequest({",
           "  url: pm.environment.get(\"baseUrl\") + \"/auth\",",
           "  method: \"POST\",",
@@ -251,6 +255,7 @@
                   "});",
                   "",
                   "pm.test(\"Reason is Bad credentials\", function () {",
+
                   "  pm.expect(pm.response.json().reason).to.eql(\"Bad credentials\");",
                   "});"
                 ]
@@ -266,6 +271,7 @@
               {
                 "key": "Accept",
                 "value": "application/json"
+
               },
               {
                 "key": "Content-Type",
@@ -310,6 +316,7 @@
         }
       ]
     },
+    
     {
       "name": "Booking",
       "description": "Create a booking with a unique name, read it, filter for it, update it, then delete it. Ids and list lengths come from this run only.",
