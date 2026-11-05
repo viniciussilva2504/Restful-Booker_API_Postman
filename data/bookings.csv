@@ -1,0 +1,6 @@
+firstname,lastname,totalprice,depositpaid,checkin,checkout,additionalneeds
+Vinicius,Silva,220,true,2028-04-01,2028-04-05,Breakfast
+Ana,Costa,175,false,2028-05-10,2028-05-12,
+Joao,Pereira,90,true,2028-07-01,2028-07-08,Late checkout
+Maria,Oliveira,310,false,2028-08-15,2028-08-20,Extra pillow
+Lucas,Santos,45,true,2028-09-01,2028-09-03,Airport transfer
